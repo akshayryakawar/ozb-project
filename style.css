@@ -1,0 +1,161 @@
+/* font  */
+
+/* body {
+  font-family: "Segoe UI", "Segoe UI Semibold", "Segoe UI Bold", "Segoe UI Italic", sans-serif;
+} */
+
+
+/* Navbar layout and logo */
+.navbar {
+  box-shadow: 0 4px 10px rgba(55, 145, 202, 0.5);
+  background-color: #f8f9fa;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.custom-logo {
+  width: 256px;
+  height: 75px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+/* Align links to left and give space between them */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+/* Push the carousel down below navbar */
+.carousel {
+  margin-top: 130px;
+}
+
+
+/* Navbar links - make text black */
+.navbar-nav .nav-link {
+  color: black !important;
+  font-weight: 500;
+  margin-right: 1.5rem;
+  text-decoration: none;
+}
+
+/* Optional: Keep hover also black (or you can make it darker) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: black !important;
+  text-decoration: none;
+}
+
+.card{
+    box-shadow: 2px 5px 5px 5px #6b6b6b !important;
+}
+.card:hover{
+    box-shadow: 2px 5px 5px 5px #3596D3 !important;
+}
+
+.card-btn{
+
+  background-color: #3596D3 !important;
+  color: #f8f9fa !important;
+  border: none !important;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  padding: 5px 25px;
+
+}
+
+.card-btn:hover{
+
+  background-color: #f8f9fa !important;
+  color: #3596D3 !important;
+  border: 1px solid #3596D3 !important;
+}
+
+.abt-btn{
+  width: 220px !important;
+  border-radius: 1px !important;
+  background-color: white !important;
+  color: #3596D3 !important;
+  border: none !important;
+  box-shadow: 1px 1px 1px 1px #afafaf;
+  /* font-family: "Segoe UI Semibold", "Segoe UI", sans-serif; */
+}
+
+.abt-btn:hover{
+
+  background-color: #3596D3 !important;
+  color: #f8f9fa !important;
+}
+
+.check-btn{
+  color: red !important;
+  font-size: 30px !important;
+  
+}
+
+.last-btn{
+  background-color: #F27935 !important;
+  color: white !important;
+  border: none !important;
+  font-size: 1.25rem !important;
+  padding: 2px 35px !important;
+  border-radius: 10px !important;
+  
+}
+
+.last-btn:hover{
+
+  background-color: white !important;
+  color: #F27935 !important;
+  border: 1px solid #F27935 !important; /* orange border on hover */
+  
+}
+
+.card-hover{
+  box-shadow: none !important; 
+}
+
+.card-hover:hover {
+  border: 2px solid #F27935 !important; /* Orange border */
+  box-shadow: none !important; 
+}
+
+.logo-wrapper {
+  width: 1200px;
+  height: 221px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(51, 51, 51, 0.1);
+  border-radius: 10px;
+}
+
+.logo-wrapper img {
+  padding: 5px 10px;
+}
+
+.World-Class-box {
+  width: 2000px;
+  height: 240px;
+  background-color: #C1C6DD;
+  margin: 40px 0px;
+  padding: 50px 120px;
+}
+
+.card2-btn:hover{
+  color: #3596D3 !important;
+  cursor: pointer;
+}
+
+
+.Multi-Functional-box {
+  width: 2000px;
+  height: 350px;
+  background-color: white;
+  margin: 40px 0px;
+  padding: 50px 120px;
+}
