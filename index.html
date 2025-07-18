@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 5 Carousel</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      box-shadow: 0 4px 10px rgba(55, 145, 202, 0.5);
+      background-color: #f8f9fa;
+    }
+
+    .custom-logo {
+      width: 256px;
+      height: 75px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+
+    .carousel {
+      margin-top: 130px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: brightness(0) saturate(100%) invert(45%) sepia(20%) saturate(2000%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    }
+
+    .navbar-nav .nav-link {
+      color: black !important;
+      font-weight: 500;
+    }
+
+    /* Hover effect */
+    .navbar-nav .nav-link:hover {
+      color: #0d6efd !important;
+      /* Bootstrap primary blue */
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #0d6efd !important;
+      border-bottom: 2px solid #0d6efd;
+    }
+
+    .dropdown-menu a {
+      color: black !important;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-4 px-5 fixed-top border-top border-5 border-primary"
+    style="padding-left: 50px !important;padding-right: 50px !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./slider conatiner img/o2b_logo.png" alt="Logo" class="custom-logo">
+      </a>
+
+      <!-- Toggle for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="technologiesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="technologiesDropdown">
+              <li><a class="dropdown-item" href="#">SAP</a></li>
+              <li><a class="dropdown-item" href="#">Odoo</a></li>
+              <li><a class="dropdown-item" href="#">OpenMRS</a></li>
+            </ul>
+          </li>
+
+          <!-- Technologies Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="technologiesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Technologies
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="technologiesDropdown">
+              <li><a class="dropdown-item" href="#">SAP</a></li>
+              <li><a class="dropdown-item" href="#">Odoo</a></li>
+              <li><a class="dropdown-item" href="#">OpenMRS</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="technologiesDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Solutions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="technologiesDropdown">
+              <li><a class="dropdown-item" href="#">SAP</a></li>
+              <li><a class="dropdown-item" href="#">Odoo</a></li>
+              <li><a class="dropdown-item" href="#">OpenMRS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./slider conatiner img/o2b_slider1.webp" class="d-block w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./slider conatiner img/o2b_slider2 (1).webp" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./slider conatiner img/o2b_slider3.webp" class="d-block w-100" alt="Slide 3">
+      </div>
+      <div class="carousel-item">
+        <img src="./slider conatiner img/o2b_slider4.webp" class="d-block w-100" alt="Slide 4">
+      </div>
+      <div class="carousel-item">
+        <img src="./slider conatiner img/o2b_slider5.webp" class="d-block w-100" alt="Slide 5">
+      </div>
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3791CA"
+          stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3791CA"
+          stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- cards -->
+
+  <div class="card-group text-center m-4 gap-5 ">
+    <div class="card d-flex flex-column align-items-center p-3 border">
+      <img src="./slider conatiner img/home_icon_1.webp" class="card-img-top w-50" alt="...">
+      <div class="card-body d-flex flex-column align-items-center">
+        <h5 class="card-title">Supply Chain Management</h5>
+        <p class="card-text">
+          Gain complete visibility across the supply chain and manage product/material sourcing, storage, and delivery.
+        </p>
+        <button type="button" class="card-btn btn-primary mt-2 gap-2 d-flex align-items-center"><i aria-hidden="true"
+            class="fa fa-hand-point-right"></i>Learn more</button>
+      </div>
+    </div>
+
+    <div class="card d-flex flex-column align-items-center p-3 border">
+      <img src="./slider conatiner img/home_icon_2.webp" class="card-img-top w-50" alt="...">
+      <div class="card-body d-flex flex-column align-items-center">
+        <h5 class="card-title">Inventory Management</h5>
+        <p class="card-text">Keeping stock level up to date leads to fulfilling customers demands on time. Inventory
+          control made simple</p>
+        <button type="button" class="card-btn btn-primary mt-2 gap-2 d-flex align-items-center"><i aria-hidden="true"
+            class="fa fa-hand-point-right"></i>Learn more</button>
+      </div>
+    </div>
+
+    <div class="card d-flex flex-column align-items-center p-3 border">
+      <img src="./slider conatiner img/home_icon_3.webp" class="card-img-top w-50" alt="...">
+      <div class="card-body d-flex flex-column align-items-center">
+        <h5 class="card-title">Purchase Management</h5>
+        <p class="card-text">
+          Manage and control procure-to-pay process while maintaining a healthy relationship with your suppliers.
+        </p>
+        <button type="button" class="card-btn btn-primary mt-2 gap-2 d-flex align-items-center"><i aria-hidden="true"
+            class="fa fa-hand-point-right"></i>Learn more</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- carsss -->
+  <div class="d-flex gap-5 p-5">
+    <img src="./slider conatiner img/Software Business.webp" alt="">
+    <div class="d-block pe-5">
+      <p> ABOUT US </p>
+
+      <h3>Software For All Types Of Businesses</h3>
+      <div class="p-1">
+        <p>We have developed numerous business management software for all kinds of businesses. It does not matter what
+          industry you are from, you will get a wide range of enterprise management apps, features, and functionalities
+          to
+          manage your business. Our robust ERP platform is perfect for all types of industries including:</p>
+      </div>
+      <!--  -->
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col order-first">
+            <button type="button" class="btn btn-primary abt-btn ">
+              <i aria-hidden="true" class="fa fa-check check-btn"></i>
+              Manufacturing</button>
+          </div>
+          <div class="col order-last">
+            <button type="button" class="btn btn-primary abt-btn"><i aria-hidden="true"
+                class="fa fa-check check-btn"></i>
+              Fields Service</button>
+
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- second button -->
+      <div class="container text-center p-2">
+        <div class="row">
+          <div class="col order-last">
+            <button type="button" class="btn btn-primary abt-btn">
+              <i aria-hidden="true" class="fa fa-check check-btn"></i>Warehousing</button>
+          </div>
+          <div class="col order-first">
+            <button type="button" class="btn btn-primary abt-btn">
+              <i aria-hidden="true" class="fa fa-check check-btn"></i>Distribution</button>
+
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- third button -->
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col order-last">
+            <button type="button" class="btn btn-primary abt-btn">
+              <i aria-hidden="true" class="fa fa-check check-btn"></i>E-Commerce</button>
+          </div>
+          <div class="col order-first">
+            <button type="button" class="btn btn-primary abt-btn">
+              <i aria-hidden="true" class="fa fa-check check-btn"></i>Construction</button>
+
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 align-items-center">
+        <p>Get started with a technologically advanced software system to streamline
+          your business operations and flow. This
+          enterprise resource planning software automates key business
+          functions with real-time insights including manufacturing, sales,
+          purchase, human resources, and more.</p>
+      </div>
+
+      <div class=" conatiner text-center justify-content-center">
+        <button type="button" class="btn btn-primary last-btn"><i aria-hidden="true"
+            class="fas fa-hand-point-right gap-2 p-2"></i>Meet the Experts</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- secnond card -->
+
+  <div class="container mt-5 d-flex justify-content-center gap-5">
+    <div class="card mb-3 card-hover" style="width: 240px; height: 108.59px;">
+      <div class="card-body d-flex align-items-center">
+        <img src="./slider conatiner img/icon1.webp" class="me-3" alt="..." style="width: 50px; height: 50px;">
+        <div>
+          <h4 class="card-title mb-1">15+ Years</h4>
+          <p class="card-text mb-0">On the Market</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3 card-hover" style="width: 240px; height: 108.59px;">
+      <div class="card-body d-flex align-items-center">
+        <img src="./slider conatiner img/icon2.webp" class="me-3" alt="..." style="width: 50px; height: 50px;">
+        <div>
+          <h4 class="card-title mb-1">15+ Years</h4>
+          <p class="card-text mb-0">On the Market</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3 card-hover" style="width: 240px; height: 108.59px;">
+      <div class="card-body d-flex align-items-center">
+        <img src="./slider conatiner img/icon3.webp" class="me-3" alt="..." style="width: 50px; height: 50px;">
+        <div>
+          <h4 class="card-title mb-1">15+ Years</h4>
+          <p class="card-text mb-0">On the Market</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3 card-hover" style="width: 240px; height: 108.59px;">
+      <div class="card-body d-flex align-items-center">
+        <img src="./slider conatiner img/icon4.webp" class="me-3" alt="..." style="width: 50px; height: 50px;">
+        <div>
+          <h4 class="card-title mb-1">15+ Years</h4>
+          <p class="card-text mb-0">On the Market</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AS SEEN ON Section -->
+  <div class="logo-box container my-5 d-flex justify-content-center">
+    <div class="logo-wrapper d-flex flex-column align-items-center">
+      <h5 class="text-uppercase text-center fw-bold pt-3">As Seen On</h5>
+      <div class="logo-row d-flex align-items-center justify-content-center px-3 p-5">
+        <img src="./slider conatiner img/public.svg" alt="..." height="80">
+        <img src="./slider conatiner img/public (1).svg" alt="Benzinga" height="40">
+        <img src="./slider conatiner img/public (2).svg" alt="Barchart" height="40">
+        <img src="./slider conatiner img/public (3).svg" alt="The Globe and Mail" height="80">
+        <img src="./slider conatiner img/public (4).svg" alt="Fox" height="40">
+        <img src="./slider conatiner img/public (5).svg" alt="RCN" height="40">
+        <img src="./slider conatiner img/public (6).svg" alt="The Chronicle Journal" height="40">
+
+        <img src="./slider conatiner img/public (8).svg" alt="Minyanville" height="40">
+        <!-- Rotated final image -->
+        <img src="./slider conatiner img/public (10) (1).svg" alt="Rotated" height="80">
+      </div>
+    </div>
+  </div>
+
+  <!-- Get World-Class section -->
+  <div class="d-flex justify-content-center my-5">
+    <div class="World-Class-box text-center d-flex flex-column justify-content-center align-items-center">
+      <p class="text-uppercase mb-2">Our ERP Solutions</p>
+      <h2 class="mb-1">Get World-Class Business Solutions For Every</br> Industry</h2>
+      <p class="mb-0 px-3">
+        The simplest way to manage your human resource processes. Make your
+        recruitment, onboarding,</br> attendance, payroll processing, appraisals, and
+        offboarding more productive than ever before.
+      </p>
+    </div>
+  </div>
+
+<!-- Odoo Consulting section -->
+<div class="card-group text-center m-5 gap-5">
+  <!-- Card 1 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/HomeTechAnalysis.webp" class="card-img-top w-70" alt="Supply Chain">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+      <h4 class="card-title">Odoo Consulting section</h4></div>
+      <p class="card-text">
+        The very first step is analyzing the business requirements and assessing what kind of solution we can provide
+        our clients. Further, draft a detailed business specification document that will be used for further analysis
+        and help in the ERP implementation process. </p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/HomeFitGapAnalysis.webp" class="card-img-top w-60" alt="Inventory Management">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <h4 class="card-title">Odoo Migration</h4>
+      </div>
+      <p class="card-text">
+        Once we have the detailed business specification document, we analyze the gap between the client's needs and our
+        ERP platform. Further, we evaluate what solutions we have for you and what is needed to be customized to fulfill
+        your business needs. </p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/HomeDevelopment.webp" class="card-img-top w-60" alt="Purchase Management">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <h4 class="card-title">Odoo Development</h4>
+      </div>
+      <p class="card-text">
+        Get ERP modules, mobile apps, websites, eCommerce, POS, themes, and other solutions developed. We provide fast,
+        effective, and comprehensive development services. You will get the complete ERP platform developed for your
+        enterprise. </p>
+    </div>
+  </div>
+  </div>
+
+  
+<!-- Odoo Consulting section 2-->
+<div class="card-group text-center m-5 gap-5">
+  <!-- Card 1 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/HomeCustomization.webp" class="card-img-top w-70" alt="Supply Chain">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <h4 class="card-title">Odoo Customization</h4>
+      </div>
+      <p class="card-text">
+        As per the fit-gap and tech analysis, our team will customize the modules, apps, and features to fulfill your
+        exact business requirements. Enhancing the modules and features certainly improves the automation capability of
+        the ERP platform.. </p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/HomeImplementation.webp" class="card-img-top w-60" alt="Inventory Management">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <h4 class="card-title">Odoo Implementation</h4>
+      </div>
+      <p class="card-text">
+        Once we have the detailed business specification document, we analyze the gap between the client's needs and our
+        ERP platform. Further, we evaluate what solutions we have for you and what is needed to be customized to fulfill
+        your business needs. </p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/HomeSupport.webp" class="card-img-top w-60" alt="Purchase Management">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <h4 class="card-title">Odoo Support</h4>
+      </div>
+      <p class="card-text">
+        Get ERP modules, mobile apps, websites, eCommerce, POS, themes, and other solutions developed. We provide fast,
+        effective, and comprehensive development services. You will get the complete ERP platform developed for your
+        enterprise. </p>
+    </div>
+  </div>
+  </div>
+
+
+<!-- Top Software Implementation Company section -->
+  
+  <div class="d-flex justify-content-center my-5">
+    <div class="World-Class-box text-center d-flex flex-column justify-content-center align-items-center">
+      <p class="text-uppercase mb-2">HOW TO HIRE US?</p>
+      <h2 class="mb-1">Top Software Implementation Company</h2>
+      <p class="mb-0 px-3">
+        For hiring O2b Technologies for your Software requirements, you can contact us via email, contact us for, <br>phone
+        number, etc. There are numerous advantages of hiring us.
+      </p>
+    </div>
+  </div>
+
+  <!-- WHY CHOOSE US? section -->
+
+  <div class="d-flex justify-content-center my-5">
+    <div class="Multi-Functional-box text-center d-flex flex-column justify-content-center align-items-center">
+      <div>
+      <img src="./slider conatiner img/cm_main_circle.webp" alt="">
+      </div>
+      <p class="text-uppercase mb-2">WHY CHOOSE US?</p>
+      <h2 class="mb-1">A Multi-Functional Team</h2>
+      <p class="mb-0">
+        We are the world-leading Business software company with a powerful team of experts. <br>
+        We have skilled developers, consultants, business analysts, and quality analysts. They can help your business to
+        grow faster and gain more profits than before.
+      </p>
+    </div>
+  </div>
+
+  <!-- What Our Clients are Saying? section -->
+    <div class="d-flex justify-content-center my-5">
+      <div class="World-Class-box text-center d-flex flex-column justify-content-center align-items-center">
+        <h2 class="mb-1">What Our Clients are Saying?</h2>
+        <p class="mb-0 px-3">
+         We have a huge base of satisfied customers and they are accomplishing their business objectives more quickly.
+        </p>
+        <div class=" conatiner text-center justify-content-center p-3">
+          <button type="button" class="btn btn-primary last-btn">Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+     
+<!-- Odoo last section 2-->
+<div class="card-group text-center m-5 gap-5">
+  <!-- Card 1 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/Odoo-Hosting.webp" class="card-img-top w-70" alt="Supply Chain">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <p class="card-title fw-bold">Unlocking the Benefits of Odoo Hosting</p>
+      </div>
+      <p class="card-text">
+        As per the fit-gap and tech analysis, our team will customize the modules, apps, and features to fulfill your
+        exact business requirements. Enhancing the modules and features certainly improves the automation capability of
+        the ERP platform.. </p>
+      
+        <button type="button" class="card-btn btn-primary mt-2 gap-2 d-flex align-items-center">Learn more</button>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/Odoo-17.webp" class="card-img-top w-60" alt="Inventory Management">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <p class="card-title fw-bold">What's New in Odoo 18?</p>
+      </div>
+      <p class="card-text">
+        Once we have the detailed business specification document, we analyze the gap between the client's needs and our
+        ERP platform. Further, we evaluate what solutions we have for you and what is needed to be customized to fulfill
+        your business needs. </p>
+      <button type="button" class="card-btn btn-primary mt-2 gap-2 d-flex align-items-center">Learn more</button>
+
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card d-flex flex-column align-items-center p-2 border shadow-sm">
+    <img src="./slider conatiner img/Industriеs.webp" class="card-img-top w-60" alt="Purchase Management">
+    <div class="card-body d-flex flex-column align-items-center">
+      <div class="card2-btn">
+        <p class="card-title fw-bold">Which Industries use Odoo?</p>
+      </div>
+      <p class="card-text">
+        Get ERP modules, mobile apps, websites, eCommerce, POS, themes, and other solutions developed. We provide fast,
+        effective, and comprehensive development services. You will get the complete ERP platform developed for your
+        enterprise. </p>
+      <button type="button" class="card-btn btn-primary mt-2 gap-2 d-flex align-items-center">Learn more</button>
+
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
